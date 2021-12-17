@@ -6,7 +6,7 @@ import pandas as pd
 # sample address: st.sidebar.text("0x8f0964189b28cd164ba1080a53962a26adafa51d")
 # sample collection: st.sidebar.text("akc")
 
-st.sidebar.header("Endpoints")
+st.sidebar.header("Endpoints^_1")
 endpoint_choices = ['Assets'] # 'Events',  'Rarity'
 endpoint = st.sidebar.selectbox("Choose an Endpoint", endpoint_choices)
 
