@@ -23,13 +23,13 @@ def render_asset(asset):
 #    else:
 #        st.write(asset['collection']['description'])
 #
-#    if asset['image_url'].endswith('mp4') or asset['image_url'].endswith('mov'):
-#        st.video(asset['image_url'])
-#    elif asset['image_url'].endswith('svg'):
-#        svg = requests.get(asset['image_url']).content.decode()
-#        st.image(svg)
-#    elif asset['image_url']:
-#        st.image(asset['image_url'])
+    if asset['image_url'].endswith('mp4') or asset['image_url'].endswith('mov'):
+        st.video(asset['image_url'])
+    elif asset['image_url'].endswith('svg'):
+        svg = requests.get(asset['image_url']).content.decode()
+        st.image(svg)
+    elif asset['image_url']:
+        st.image(asset['image_url'])
 
 
 if endpoint == 'Events':
