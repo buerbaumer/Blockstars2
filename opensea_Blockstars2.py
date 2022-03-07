@@ -83,9 +83,9 @@ if endpoint == 'Assets':
 
     r = requests.get('https://api.opensea.io/api/v1/assets', params=params)
 
-    assets = r.json()['assets']
-    for asset in assets:                
-        render_asset(asset)
+    #assets = r.json()['assets']
+    #for asset in assets:                
+    #    render_asset(asset)
 
     st.subheader("Raw JSON Data")
     st.write(r.json())
