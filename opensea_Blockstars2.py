@@ -18,10 +18,10 @@ def render_asset(asset):
     else:
         st.subheader(f"{asset['collection']['name']} #{asset['token_id']}")
 
-    if asset['description'] is not None:
-        st.write(asset['description'])
-    else:
-        st.write(asset['collection']['description'])
+#    if asset['description'] is not None:
+#        st.write(asset['description'])
+#    else:
+#        st.write(asset['collection']['description'])
 
     if asset['image_url'].endswith('mp4') or asset['image_url'].endswith('mov'):
         st.video(asset['image_url'])
