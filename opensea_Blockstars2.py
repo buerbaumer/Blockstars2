@@ -13,23 +13,23 @@ endpoint = st.sidebar.selectbox("Choose an Endpoint", endpoint_choices)
 st.title(f"Blockstars OpenSea API Explorer - {endpoint}")
 
 def render_asset(asset):
-    if asset['name'] is not None:
-        st.subheader(asset['name'])
-    else:
-        st.subheader(f"{asset['collection']['name']} #{asset['token_id']}")
-
+#    if asset['name'] is not None:
+#        st.subheader(asset['name'])
+#    else:
+#        st.subheader(f"{asset['collection']['name']} #{asset['token_id']}")
+#
 #    if asset['description'] is not None:
 #        st.write(asset['description'])
 #    else:
 #        st.write(asset['collection']['description'])
-
-    if asset['image_url'].endswith('mp4') or asset['image_url'].endswith('mov'):
-        st.video(asset['image_url'])
-    elif asset['image_url'].endswith('svg'):
-        svg = requests.get(asset['image_url']).content.decode()
-        st.image(svg)
-    elif asset['image_url']:
-        st.image(asset['image_url'])
+#
+#    if asset['image_url'].endswith('mp4') or asset['image_url'].endswith('mov'):
+#        st.video(asset['image_url'])
+#    elif asset['image_url'].endswith('svg'):
+#        svg = requests.get(asset['image_url']).content.decode()
+#        st.image(svg)
+#    elif asset['image_url']:
+#        st.image(asset['image_url'])
 
 
 if endpoint == 'Events':
